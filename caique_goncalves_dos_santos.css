@@ -1,12 +1,12 @@
 :root {
     --first-color: #FF204E; 
     --second-color: #A0153E;
-    --thirst-color: #5D0E41;
+    --third-color: #5D0E41;
     --fourth-color: #00224D;
 
     --vfirst-color: #86ff68; 
     --vsecond-color: #ecd081;
-    --vthirst-color: #696348;
+    --vthird-color: #696348;
     --vfourth-color: #00224D;
 }
 
@@ -16,3 +16,45 @@
     list-style: none;
     text-decoration: none;
 }
+
+.bg-first-color {
+    background-color: var(--first-color);
+}
+
+.bg-second-color {
+    background-color: var(--second-color);
+}
+
+.bg-third-color {
+    background-color: var(--third-color);
+}
+
+.bg-fourth-color {
+    background-color: var(--fourth-color);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    left: 0; 
+    z-index: 1000; 
+  }
+
+
+  .hero {
+    background-image: url('assets/img/bgcraftsmanship1.JPG');
+    min-height: 600px;
+  }
+
+  .bg-header{
+    background: linear-gradient(#00224D, #00214d17);
+  }
+
+  .img-fluid {
+    width: 300px;
+    height: 300px;
+  }
+
+  .aside-linear-bg {
+    background: linear-gradient(var(--first-color), var(--fourth-color));
+  }
