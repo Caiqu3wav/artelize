@@ -19,40 +19,7 @@
       z-index: 1000;
     }
 
-    .carousel-items {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .carousel-item {
-      background-color: #00224D;
-      color: whitesmoke;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      padding: 6px;
-      text-align: center;
-      width: 380px;
-      margin: 0 10px;
-    }
-
-    .carousel-item img {
-      width: 100%;
-      height: auto;
-      max-height: 300px;
-      border-radius: 5px;
-    }
-
-    .carousel-item h5 {
-      margin: 10px 0;
-      font-size: 16px;
-    }
-
-    .carousel-item p {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 5px;
-    }
+   
   </style>
 </head>
 
@@ -137,15 +104,18 @@
     <div class="w-50 pt-5 ">
       <h1 class="border-bottom rounded text-white py-2 border-warning bg-dark"
       style="--bs-bg-opacity: .5">Produtos Destaque</h1>
-      <div class="carousel-items">
+      <div class="product-cards">
 
       </div>
     </div>
   </div>
     <div class="transition-overlay-1">a</div>
   </section>
-  <section class="">
-
+  <section class="second-home-section">
+    <h1>Decoração Artesanal para Seu Lar</h1>
+    <p>
+        Transforme sua casa em um verdadeiro lar com nossa seleção de produtos artesanais de decoração. Cada peça é cuidadosamente feita à mão, refletindo a beleza e a singularidade da estética caseira. Desde cerâmicas encantadoras a têxteis feitos com carinho, nossa coleção traz um toque pessoal que enriquece qualquer ambiente. Deixe sua criatividade fluir e descubra como pequenos detalhes podem fazer uma grande diferença na atmosfera do seu espaço!
+    </p>
   </section>
   <footer
           class="text-center text-lg-start text-white"
@@ -275,31 +245,32 @@
     <!-- Section: Links  -->
   </footer>
 
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./data/index.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="./data/index.js"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script>document.addEventListener("DOMContentLoaded", function () {
 
 
-      // Inicializa o Slick Carousel
-      $('.carousel-items').slick({
+$('.carousel-items').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
         dots: true,
         responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-          }
         ]
-      });
+    });
     });
   </script>
 </body>
