@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
         carouselItems.innerHTML += `
         <div class="carousel-item">
               <img src="${produto.imagem}" alt="${produto.titulo}">
-          <h5>${produto.titulo}</h5>
-          <p class="product-description">${produto.descricao}</p>
+          <h5 class="product-carousel-title">${produto.titulo}</h5>
+          <p class="product-carousel-description">${produto.descricao}</p>
           <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
           <p>Desconto: R$ ${produto.desconto.toFixed(2)}</p>
-          <div class="d-flex row gap-2 align-items-center justify-items-center">
-          <button class="add-to-cart" width="30">A</button>
-          <button class="">Ver Mais</button>
+          <div class="product-carousel-buttons">
+          <button class="add-cart-btn"><i class="fa-solid fa-plus"></i></button>
+          <button class="btn btn-success">Ver Mais</button>
           </div>
         </div>
         `

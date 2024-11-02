@@ -1,139 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artelize</title>
-    <link rel="stylesheet" href="./caique_goncalves_dos_santos.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <style>
-      .dropdown-menu {
-               position: absolute; 
-               z-index: 1000;
-      }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artelize</title>
+  <link rel="icon" type="image/x-icon" href="/assets/img/artelizeLogo.png">
+  <link rel="stylesheet" href="./caique_goncalves_dos_santos.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script src="https://kit.fontawesome.com/f50054c2da.js" crossorigin="anonymous"></script>
+  <style>
+    .dropdown-menu {
+      position: absolute;
+      z-index: 1000;
+    }
 
-      .carousel-items {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
+    .carousel-items {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-  .carousel-item {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    width: 250px;
-    margin: 0 10px;
-  }
+    .carousel-item {
+      background-color: #00224D;
+      color: whitesmoke;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 6px;
+      text-align: center;
+      width: 380px;
+      margin: 0 10px;
+    }
 
-  .carousel-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      border-radius: 5px;
+    }
 
-  .carousel-item h5 {
-    margin: 10px 0;
-    font-size: 16px;
-  }
+    .carousel-item h5 {
+      margin: 10px 0;
+      font-size: 16px;
+    }
 
-  .carousel-item p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 5px;
-  }
-     </style>
-  </head>
-   
+    .carousel-item p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
 <body>
-    <header>
-      <nav class="navbar navbar-dark bg-header fixed-top">
-        <div class="container-fluid">
-            <img src="./assets/img/artelizeLogo.png" width="80px" alt="">
-          
-            <ul class="navbar-nav d-flex flex-row mb-2 gap-4 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/produtos">Produtos</a>
-                </li>
-               
-                <li class="nav-item">
-                    <a class="nav-link" href="/sobre">Sobre</a>
-                </li>
-            </ul>
+  <header>
+    <nav class="navbar navbar-dark bg-header fixed-top">
+      <div class="container-fluid">
+        <img src="./assets/img/artelizeLogo.png" width="80px" alt="">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end aside-linear-bg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Artelize</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="produtos">Produtos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/sobre">Sobre</a>
-                  </li>
-                </ul>
-                <form class="d-flex mt-3" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
+        <ul class="navbar-nav d-flex flex-row mb-2 gap-4 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/produtos">Produtos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/sobre">Sobre</a>
+          </li>
+        </ul>
+
+        <div class="d-flex gap-3">
+        <button class="btn btn-outline-light cart-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-shopping-cart"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">
+            0
+          </span>
+        </button>
+  
+        <!-- Dropdown do Carrinho -->
+        <ul class="dropdown-menu dropdown-menu-end p-3" id="cart-dropdown">
+          <li><h6 class="dropdown-header">Seu Carrinho</h6></li>
+          <li class="cart-items"></li>
+          <li class="dropdown-divider"></li>
+          <li class="text-end"><button class="btn btn-primary btn-sm">Finalizar Compra</button></li>
+        </ul>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end aside-linear-bg" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Artelize</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="produtos">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/sobre">Sobre</a>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
         </div>
+      </div>
+     </div>
     </nav>
   </header>
 
-  <section class="hero pt-3 px-4">
+  <section class="hero ">
+    <div class="d-flex w-full align-items-center pt-3 justify-content-between px-2 gap-4">
+    <div class="w-50 px-4 overlay-hero rounded h-25 d-flex flex-column gap-3 justify-content-center align-items-center">
+      <img src="/assets/img/artelizeLogo.png" alt="">
+      <h2 class="border-bottom border-secondary">Artelize</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro incidunt, accusamus eos vitae quasi vel
+        quaerat fugiat soluta. Nam cum, adipisci tempora voluptatem nobis rem facilis qui neque modi iusto voluptate
+        voluptas aut temporibus omnis. Ipsa vitae beatae mollitia!</p>
+    </div>
     <div class="w-50 pt-5 ">
-   <h1>Produtos Destaque</h1>
-   <div class="carousel-items">
+      <h1 class="border-bottom rounded text-white py-2 border-warning bg-dark"
+      style="--bs-bg-opacity: .5">Produtos Destaque</h1>
+      <div class="carousel-items">
 
-   </div>
+      </div>
+    </div>
   </div>
+    <div class="transition-overlay-1">a</div>
   </section>
-  
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="./data/index.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-   
-   <script>document.addEventListener("DOMContentLoaded", function() {
-   
+  <section class="">
 
-    // Inicializa o Slick Carousel
-    $('.carousel-items').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: true,
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
+  </section>
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #1c2331"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4"
+             style="background-color: #6351ce"
+             >
+      <!-- Left -->
+      <div class="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Company name</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Products</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#!" class="text-white">MDBootstrap</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">MDWordPress</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">BrandFlow</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Bootstrap Angular</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Useful links</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#!" class="text-white">Your Account</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Become an Affiliate</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Shipping Rates</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./data/index.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>document.addEventListener("DOMContentLoaded", function () {
+
+
+      // Inicializa o Slick Carousel
+      $('.carousel-items').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
           }
-        }
-      ]
+        ]
+      });
     });
-});
-</script>
+  </script>
 </body>
+
 </html>
