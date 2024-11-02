@@ -1,3 +1,4 @@
+
 const produtosDestaque = [
     {
         titulo: "Bonsai Floresta com musgo preservado",
@@ -20,7 +21,7 @@ const produtosDestaque = [
         desconto: 10099.99,
         imagem: "https://i.etsystatic.com/27513826/r/il/c4ba9a/5262134012/il_794xN.5262134012_dwuy.jpg"
     }
-]
+];
 
 const produtosArtesanais = [
     {
@@ -30,74 +31,27 @@ const produtosArtesanais = [
         desconto: 39.99,
         imagem: "https://i.etsystatic.com/10278795/r/il/bab72d/4434146650/il_794xN.4434146650_53fw.jpg"
     }
-]
+];
 
-document.addEventListener('DOMContentLoaded', () => {
-  
-  const carouselInner = document.getElementById('carousel-inner');
-  const carouselIndicators = document.getElementById('carousel-indicators');
 
-  produtosDestaque.forEach((produto, index) => {
-    // Criar o item do carrossel
-    const itemDiv = document.createElement('div');
-    itemDiv.className = `carousel-item ${index === 0 ? 'active' : ''}`;
-    
-    const rowDiv = document.createElement('div');
-    rowDiv.className = 'row';
+document.addEventListener('DOMContentLoaded', function () {
+    const carouselItems = document.querySelector('.carousel-items');
 
-    const colDiv = document.createElement('div');
-    colDiv.className = 'col-sm-4';
+    produtosDestaque.forEach(produto => {
+        carouselItems.innerHTML += `
+        <div class="carousel-item">
+              <img src="${produto.imagem}" alt="${produto.titulo}">
+          <h5>${produto.titulo}</h5>
+          <p class="product-description">${produto.descricao}</p>
+          <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
+          <p>Desconto: R$ ${produto.desconto.toFixed(2)}</p>
+          <div class="d-flex row gap-2 align-items-center justify-items-center">
+          <button class="add-to-cart" width="30">A</button>
+          <button class="">Ver Mais</button>
+          </div>
+        </div>
+        `
+    })
 
-    const thumbWrapper = document.createElement('div');
-    thumbWrapper.className = 'thumb-wrapper';
 
-    const imgBox = document.createElement('div');
-    imgBox.className = 'img-box';
-
-    const img = document.createElement('img');
-    img.src = produto.imagem;
-    img.className = 'img-fluid';
-    img.alt = produto.titulo;
-    img.width = 300;
-    img.height = 300;
-
-    imgBox.appendChild(img);
-
-    const thumbContent = document.createElement('div');
-    thumbContent.className = 'thumb-content';
-
-    const title = document.createElement('h4');
-    title.textContent = produto.titulo;
-    title.style.maxHeight = '60px';
-    title.style.overflow = 'hidden';
-
-    const description = document.createElement('p');
-    description.textContent = produto.descricao;
-    description.style.maxHeight = '100px';
-    description.style.overflow = 'hidden';
-
-    const btn = document.createElement('a');
-    btn.href = '#';
-    btn.className = 'btn btn-primary';
-    btn.innerHTML = `More <i class="fa fa-angle-right"></i>`;
-
-    thumbContent.appendChild(title);
-    thumbContent.appendChild(description);
-    thumbContent.appendChild(btn);
-
-    thumbWrapper.appendChild(imgBox);
-    thumbWrapper.appendChild(thumbContent);
-
-    colDiv.appendChild(thumbWrapper);
-    rowDiv.appendChild(colDiv);
-    itemDiv.appendChild(rowDiv);
-    carouselInner.appendChild(itemDiv);
-
-    // Criar os indicadores
-    const indicator = document.createElement('li');
-    indicator.dataset.bsTarget = '#myCarousel';
-    indicator.dataset.bsSlideTo = index;
-    if (index === 0) indicator.className = 'active';
-    carouselIndicators.appendChild(indicator);
-  });
-});
+})

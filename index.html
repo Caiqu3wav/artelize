@@ -7,98 +7,46 @@
     <title>Artelize</title>
     <link rel="stylesheet" href="./caique_goncalves_dos_santos.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <style>
       .dropdown-menu {
                position: absolute; 
                z-index: 1000;
       }
 
-      .carousel {
-	margin: 30px auto 60px;
-	padding: 0 80px;
-}
-.carousel .carousel-item {
-	text-align: center;
-	overflow: hidden;
-}
-.carousel .carousel-item h4 {
-	font-family: 'Varela Round', sans-serif;
-}
-.carousel .carousel-item img {
-	max-width: 100%;
-	display: inline-block;
-}
-.carousel .carousel-item .btn {
-	border-radius: 0;
-	font-size: 12px;
-	text-transform: uppercase;
-	font-weight: bold;
-	border: none;
-	background: #a177ff;
-	padding: 6px 15px;
-	margin-top: 5px;
-}
-.carousel .carousel-item .btn:hover {
-	background: #8c5bff;
-}
-.carousel .carousel-item .btn i {
-	font-size: 14px;
-	font-weight: bold;
-	margin-left: 5px;
-}
-.carousel .thumb-wrapper {
-	margin: 5px;
-	text-align: left;
-	background: #fff;
-	box-shadow: 0px 2px 2px rgba(0,0,0,0.1);   
-}
-.carousel .thumb-content {
-	padding: 15px;
-	font-size: 13px;
-}
-.carousel-control-prev, .carousel-control-next {
-	height: 44px;
-	width: 44px;
-	background: none;	
-	margin: auto 0;
-	border-radius: 50%;
-	border: 3px solid rgba(0, 0, 0, 0.8);
-}
-.carousel-control-prev i, .carousel-control-next i {
-	font-size: 36px;
-	position: absolute;
-	top: 50%;
-	display: inline-block;
-	margin: -19px 0 0 0;
-	z-index: 5;
-	left: 0;
-	right: 0;
-	color: rgba(0, 0, 0, 0.8);
-	text-shadow: none;
-	font-weight: bold;
-}
-.carousel-control-prev i {
-	margin-left: -3px;
-}
-.carousel-control-next i {
-	margin-right: -3px;
-}
-.carousel-indicators {
-	bottom: -50px;
-}
-.carousel-indicators li, .carousel-indicators li.active {
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	margin: 4px;
-	border: none;
-}
-.carousel-indicators li {	
-	background: #ababab;
-}
-.carousel-indicators li.active {	
-	background: #555;
-}
+      .carousel-items {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .carousel-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+    margin: 0 10px;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .carousel-item h5 {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .carousel-item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
      </style>
   </head>
    
@@ -151,36 +99,41 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Produtos em promoção</h1>
-    <div class="container-xl">
-      <div class="row">
-        <div class="col-md-10 mx-auto">
-          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30300">
-            <!-- Carousel indicators -->
-            <ol class="carousel-indicators" id="carousel-indicators">
-              <!-- Indicadores vão ser preenchidos pelo JavaScript -->
-            </ol>   
-        
-            <!-- Wrapper for carousel items -->
-            <div class="carousel-inner" id="carousel-inner">
-              <!-- Itens do carrossel vão ser preenchidos pelo JavaScript -->
-            </div>
-        
-            <!-- Carousel controls -->
-            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
-              <i class="fa fa-angle-left"></i>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
-              <i class="fa fa-angle-right"></i>
-            </a>
-          </div>
-        </div>
-  </div>
-</div>
+  <section class="hero pt-3 px-4">
+    <div class="w-50 pt-5 ">
+   <h1>Produtos Destaque</h1>
+   <div class="carousel-items">
 
+   </div>
+  </div>
   </section>
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./data/index.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   
+   <script>document.addEventListener("DOMContentLoaded", function() {
+   
+
+    // Inicializa o Slick Carousel
+    $('.carousel-items').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+});
+</script>
 </body>
 </html>
