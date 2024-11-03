@@ -1,21 +1,22 @@
-import { produtosDestaque } from "./data/index.js";
+import { produtosDestaque, produtos } from "./data/index.js";
 
 //Sistema de carrinho de compras
 
 document.addEventListener('DOMContentLoaded', function () {
     const cartDropdown = document.querySelector('#cart-dropdown .cart-items');
     const cartCount = document.getElementById('cart-count');
-    let cart = [];
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
 
     const productCardsContainer = document.querySelector('.product-cards');
 
-    produtosDestaque.forEach(produto => {
+    produtosDestaque.slice(0, 3).forEach(produto => {
         productCardsContainer.innerHTML += `
         <div class="product-card">
             <img src="${produto.imagem}" alt="${produto.titulo}">
             <h5 class="product-carousel-title">${produto.titulo}</h5>
             <p class="product-carousel-description">${produto.descricao}</p>
-            <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
+            <p>Preço: R$ <s>${produto.preco.toFixed(2)}</s></p>
             <p>Desconto: R$ ${produto.desconto.toFixed(2)}</p>
             <div class="product-carousel-buttons">
                 <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
@@ -40,30 +41,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function updateCart() {
-        cartDropdown.innerHTML = '';
-        cart.forEach((item, index) => {
-            const { produto, quantidade } = item;
-            cartDropdown.innerHTML += `
-            <li class="cart-item">
-                <img src="${produto.imagem}" alt="${produto.titulo}">
-                <div>
-                    <p class="cart-item-title">${produto.titulo} (Quantidade: ${quantidade})</p>
-                    <p class="cart-item-price">R$ ${produto.preco.toFixed(2)} cada</p>
-                </div>
-                <div class="cart-item-total">
-                    <p>Total: R$ ${(produto.preco * quantidade).toFixed(2)}</p>
-                </div>
-                <div class="d-flex flex-column gap-2">
-                    <button class="btn btn-sm btn-danger remove-item" data-index="${index}">Remover</button>
-                    ${quantidade > 1 ? `<button class="btn btn-sm btn-warning remove-all" data-index="${index}">Remover Todos</button>` : ''}
-                </div>
-            </li>
-            `;
-        });
+    cartDropdown.innerHTML = '';
+    cart.forEach((item, index) => {
+        const { produto, quantidade } = item;
+        cartDropdown.innerHTML += `
+        <li class="cart-item">
+            <img src="${produto.imagem}" alt="${produto.titulo}">
+            <div>
+                <p class="cart-item-title">${produto.titulo} (Quantidade: ${quantidade})</p>
+                <p class="cart-item-price">R$ ${produto.preco.toFixed(2)} cada</p>
+            </div>
+            <div class="cart-item-total">
+                <p>Total: R$ ${(produto.preco * quantidade).toFixed(2)}</p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+                <button class="btn btn-sm btn-danger remove-item" data-index="${index}">Remover</button>
+                ${quantidade > 1 ? `<button class="btn btn-sm btn-warning remove-all" data-index="${index}">Remover Todos</button>` : ''}
+            </div>
+        </li>
+        `;
+    });
 
-        cartCount.textContent = cart.reduce((total, item) => total + item.quantidade, 0); // Atualiza a contagem total
-        setupRemoveButtons(); // Configura os botões de remover
-    }
+    cartCount.textContent = cart.reduce((total, item) => total + item.quantidade, 0); // Atualiza a contagem total
+    localStorage.setItem('cart', JSON.stringify(cart)); // Salva o carrinho no localStorage
+    setupRemoveButtons(); // Configura os botões de remover
+}
 
     function setupRemoveButtons() {
         // Configura o botão para remover um único item
@@ -93,7 +95,26 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-});
+
+    const carouselDecInner = document.querySelector('.carousel-decoracao-inner');
+    
+    produtos.filter(produto => produto.categoria === 'decoracao').forEach(produto => {
+        carouselDecInner.innerHTML += `
+            <div class="carousel-decoracao-item carousel-item">
+                <img src="/assets/img/products/${produto.imagem}" alt="${produto.titulo}">
+                <h5 class="product-carousel-title">${produto.titulo}</h5>
+                <p class="product-carousel-description">${produto.descricao}</p>
+                <p>Preço: R$ <s>${produto.preco.toFixed(2)}</s></p>
+                <p>Desconto: R$ ${produto.desconto.toFixed(2)}</p>
+                <div class="product-carousel-buttons">
+                    <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
+                    <button class="btn btn-success">Ver Mais</button>
+                </div>
+            </div>
+                `
+                console.log(produto.imagem);
+   });
+})
 
 document.addEventListener('DOMContentLoaded', function () {
     const dropdownToggle = document.querySelector('.dropdown-toggle');

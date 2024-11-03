@@ -1,0 +1,10 @@
+a {
+    text-decoration: none !important;
+}
+
+
+.hero-about{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}

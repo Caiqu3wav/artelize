@@ -18,7 +18,11 @@ button {
 }
 
 a{
-  text-decoration: none;
+  text-decoration: none !important;
+}
+
+.p-artelize{
+  font-size: 16px;
 }
 
 .bg-first-color {
@@ -35,6 +39,10 @@ a{
 
 .bg-fourth-color {
     background-color: var(--fourth-color);
+}
+
+.bg-linear-fourth-second{
+  background: linear-gradient(var(--fourth-color), var(--second-color));
 }
 
 .nav-item.dropdown {
@@ -72,6 +80,7 @@ a{
 
 
 .cart-items {
+  max-width: 500px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -209,4 +218,26 @@ a{
   .second-home-section{
     background: linear-gradient(var(--fourth-color), var(--first-color));
     min-height: 600px;
+  }
+
+  .carousel-decoracao-item {
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 4px;
+    background-color: var(--third-color);
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+
+  .carousel-decoracao-item img{
+    width: 350px;
+    height: 350px;
+  }
+
+  .hero-about{
+    background: linear-gradient(var(--first-color), var(--fourth-color), var(--third-color));
   }

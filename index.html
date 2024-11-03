@@ -32,25 +32,25 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/produtos">Produtos</a>
+            <a class="nav-link" target="_blank" href="/produtos">Produtos</a>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" target="_blank" role="button" data-toggle="dropdown" aria-expanded="false">
               Categorias
             </a>
             <ul class="dropdown-menu">
-              <li class="dropdown-item"><a class="text-decoration-none" href="/categorias/decoracao">Decoração</a></li>
-              <li class="dropdown-item"><a class="text-decoration-none" href="/categorias/moveis">Móveis</a></li>
-              <li class="dropdown-item"><a class="text-decoration-none" href="/categorias/cozinha">Utensílios de
+              <li class="dropdown-item"><a class="text-decoration-none" target="_blank" href="/categorias/decoracao">Decoração</a></li>
+              <li class="dropdown-item"><a class="text-decoration-none" target="_blank" href="/categorias/moveis">Móveis</a></li>
+              <li class="dropdown-item"><a class="text-decoration-none" target="_blank" href="/categorias/cozinha">Utensílios de
                   Cozinha</a></li>
-              <li class="dropdown-item"><a class="text-decoration-none" href="/categorias/acessorios">Acessórios</a>
+              <li class="dropdown-item"><a class="text-decoration-none" target="_blank" href="/categorias/acessorios">Acessórios</a>
               </li>
             </ul>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/sobre">Sobre</a>
+            <a class="nav-link" target="_blank" href="/sobre">Sobre</a>
           </li>
         </ul>
 
@@ -113,7 +113,7 @@
       <div class="px-4 overlay-hero rounded h-25 d-flex flex-column gap-3 justify-content-center align-items-center">
         <img src="/assets/img/artelizeLogo.png" alt="">
         <h2 class="border-bottom border-secondary">Artelize</h2>
-        <p>Na Artelize, acreditamos que cada espaço merece um toque de autenticidade e beleza. Nossa seleção de produtos
+        <p class="p-artelize">Na Artelize, acreditamos que cada espaço merece um toque de autenticidade e beleza. Nossa seleção de produtos
           artesanais é cuidadosamente elaborada por artesãos talentosos, que colocam amor e dedicação em cada peça.
           Desde peças decorativas que transformam ambientes até utensílios de cozinha que tornam a experiência culinária
           mais especial, oferecemos uma gama diversificada de itens que refletem a singularidade da estética artesanal.
@@ -123,27 +123,32 @@
       <div class="w-50 pt-5 ">
         <h1 class="border-bottom rounded text-white py-2 border-warning bg-dark" style="--bs-bg-opacity: .5">Produtos
           Destaque</h1>
-        <div class="product-cards">
+          <div class="product-cards">
 
-        </div>
+          </div>
       </div>
     </div>
     <div class="transition-overlay-1">a</div>
   </section>
   <section class="second-home-section text-white px-4">
     <h1>Decoração Artesanal para Seu Lar</h1>
+    <div class="container-inner d-flex justify-content-center align-items-center">
+      <div class="carousel">
+        <!-- Aqui serão renderizados os slides dinamicamente -->
+      </div>
+    </div>
     <p class="text-sm">
       Na Artelize, oferecemos uma seleção exclusiva de produtos artesanais que trazem autenticidade e charme para o seu
       lar. Cada peça é cuidadosamente feita à mão, refletindo a beleza da arte e a paixão dos nossos artesãos. Descubra
       como nossas criações podem transformar seu espaço e contar a sua história!
     </p>
   </section>
-  <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+  <footer class="text-center text-lg-start text-white bg-fourth-color">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+    <section class="d-flex justify-content-between p-4 bg-third-color">
       <!-- Left -->
       <div class="me-5">
-        <span>Get connected with us on social networks:</span>
+        <span>Se conecte nas redes sociais:</span>
       </div>
       <!-- Left -->
 
@@ -180,65 +185,35 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
-            <h6 class="text-uppercase fw-bold">Company name</h6>
+            <h6 class="text-uppercase fw-bold">Artelize</h6>
             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
             <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
+              Artelize traz a arte e o charme artesanal para sua vida. Nossas peças são feitas à mão, garantindo exclusividade e qualidade para seu lar.
             </p>
           </div>
           <!-- Grid column -->
-
+      
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Products</h6>
+            <h6 class="text-uppercase fw-bold">Produtos</h6>
             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-            <p>
-              <a href="#!" class="text-white">MDBootstrap</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">MDWordPress</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">BrandFlow</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Bootstrap Angular</a>
-            </p>
+            <p><a href="#!" class="text-white">Decoração</a></p>
+            <p><a href="#!" class="text-white">Artesanato</a></p>
+            <p><a href="#!" class="text-white">Presentes</a></p>
+            <p><a href="#!" class="text-white">Customizáveis</a></p>
           </div>
           <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Useful links</h6>
-            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-            <p>
-              <a href="#!" class="text-white">Your Account</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Become an Affiliate</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Shipping Rates</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Help</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
+      
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <!-- Contact -->
+            <h6 class="text-uppercase fw-bold">Contato</h6>
             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            <p><i class="fas fa-home mr-3"></i> São Paulo, SP, Brasil</p>
+            <p><i class="fas fa-envelope mr-3"></i> contato@artelize.com.br</p>
+            <p><i class="fas fa-phone mr-3"></i> +55 11 1234-5678</p>
+            <p><i class="fas fa-print mr-3"></i> +55 11 9876-5432</p>
           </div>
           <!-- Grid column -->
         </div>
