@@ -1,4 +1,4 @@
-import { produtosDestaque, produtos } from "./data/index.js";
+import { produtosDestaque, produtos, produtosHomeCarouselDecoracao } from "./data/index.js";
 
 //Sistema de carrinho de compras
 
@@ -14,39 +14,27 @@ document.addEventListener('DOMContentLoaded', function () {
         productCardsContainer.innerHTML += `
         <div class="product-card">
             <img src="${produto.imagem}" alt="${produto.titulo}">
-            <h5 class="product-carousel-title">${produto.titulo}</h5>
-            <p class="product-carousel-description">${produto.descricao}</p>
-            <p>Preço: R$ <s>${produto.preco.toFixed(2)}</s></p>
-            <p>Desconto: R$ ${produto.desconto.toFixed(2)}</p>
-            <div class="product-carousel-buttons">
+            <h5 class="product-home-title">${produto.titulo}</h5>
+            <p class="product-home-description">${produto.descricao}</p>
+            <p class="price">Preço: R$ <s>${produto.preco.toFixed(2)}</s></p>
+            <p>Desconto: <span class="desconto">R$ ${produto.desconto.toFixed(2)}</span></p>
+            <div class="product-home-buttons">
                 <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
-                <button class="btn btn-success">Ver Mais</button>
+    <a href="/product.html?id=${produto.id}" class="btn btn-success">Ver Mais</a>
             </div>
         </div>
         `;
     });
 
-    document.querySelectorAll('.add-cart-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const produto = JSON.parse(button.getAttribute('data-produto'));
-            const existingProductIndex = cart.findIndex(item => item.produto.id === produto.id);
-
-            if (existingProductIndex > -1) {
-                cart[existingProductIndex].quantidade += 1;
-            } else {
-                cart.push({ produto, quantidade: 1 });
-            }
-            updateCart();
-        });
-    });
-
+  
     function updateCart() {
     cartDropdown.innerHTML = '';
     cart.forEach((item, index) => {
         const { produto, quantidade } = item;
+        console.log(produto.imagem);
         cartDropdown.innerHTML += `
         <li class="cart-item">
-            <img src="${produto.imagem}" alt="${produto.titulo}">
+            <img src="/assets/img/products/${produto.imagem}" alt="${produto.titulo}">
             <div>
                 <p class="cart-item-title">${produto.titulo} (Quantidade: ${quantidade})</p>
                 <p class="cart-item-price">R$ ${produto.preco.toFixed(2)} cada</p>
@@ -96,24 +84,39 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    const carouselDecInner = document.querySelector('.carousel-decoracao-inner');
-    
-    produtos.filter(produto => produto.categoria === 'decoracao').forEach(produto => {
-        carouselDecInner.innerHTML += `
-            <div class="carousel-decoracao-item carousel-item">
-                <img src="/assets/img/products/${produto.imagem}" alt="${produto.titulo}">
-                <h5 class="product-carousel-title">${produto.titulo}</h5>
-                <p class="product-carousel-description">${produto.descricao}</p>
-                <p>Preço: R$ <s>${produto.preco.toFixed(2)}</s></p>
-                <p>Desconto: R$ ${produto.desconto.toFixed(2)}</p>
-                <div class="product-carousel-buttons">
-                    <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
-                    <button class="btn btn-success">Ver Mais</button>
-                </div>
-            </div>
-                `
-                console.log(produto.imagem);
-   });
+    const carousel = document.querySelector('.carousel');
+
+    produtosHomeCarouselDecoracao.forEach((produto, index) => {
+  const face = document.createElement('div');
+  face.classList.add('carousel__face');
+  face.style.transform = `rotateY(${index * 72}deg) translateZ(200px)`;
+
+  face.innerHTML = `
+    <img src="/assets/img/products/${produto.imagem}" alt="${produto.titulo}">
+    <h5 class="product-carousel-title">${produto.titulo}</h5>
+    <p class="product-carousel-preco">R$ <s>${produto.preco.toFixed(2)}</s></p>
+    <p>Desconto: <span class="desconto">R$ ${produto.desconto.toFixed(2)}</span></p>
+    <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
+    <a href="/product.html?id=${produto.id}" class="btn btn-success mt-2">Ver Mais</a>
+  `;
+
+  carousel.appendChild(face);
+});
+
+document.querySelectorAll('.add-cart-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const produto = JSON.parse(button.getAttribute('data-produto'));
+        const existingProductIndex = cart.findIndex(item => item.produto.id === produto.id);
+
+        if (existingProductIndex > -1) {
+            cart[existingProductIndex].quantidade += 1;
+        } else {
+            cart.push({ produto, quantidade: 1 });
+        }
+        updateCart();
+    });
+});
+
 })
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -131,4 +134,6 @@ document.addEventListener('DOMContentLoaded', function () {
             dropdownMenu.classList.remove('show'); // Remove a classe 'show' para ocultar o menu
         }
     });
+
+
 });
