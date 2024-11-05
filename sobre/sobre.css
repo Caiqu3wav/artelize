@@ -8,3 +8,7 @@ a {
     min-height: 100vh;
     flex-direction: column;
 }
+
+.card-body h2{
+    color: var(--first-color);
+}

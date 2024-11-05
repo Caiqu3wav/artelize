@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <p>Desconto: <span class="desconto">R$ ${produto.desconto.toFixed(2)}</span></p>
             <div class="product-home-buttons">
                 <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
-    <a href="/product.html?id=${produto.id}" class="btn btn-success">Ver Mais</a>
+    <a href="/product/index.html?id=${produto.id}" class="btn btn-success">Ver Mais</a>
             </div>
         </div>
         `;

@@ -212,56 +212,6 @@ export const produtos = [
     },
 ];
 
-export const produtosHomeCarouselDecoracao = [
-    {
-        id: 4,
-        titulo: "Pintura em aquarela de papoulas vermelhas, arte de campo de flores silvestres pintada à mão, decoração de parede de papoulas",
-        descricao: "A pintura em aquarela de papoulas vermelhas é uma ideia perfeita de presente de inauguração para a mãe, natureza, campo, arte de parede de papoula, amante da arte de flores silvestres ou todos que você ama. Uma arte única e vibrante de flores vermelhas do campo pintadas à mão decorará qualquer interior. A decoração de parede de papoulas tamanho A3 horizontal é em papel aquarela pesado de ótima qualidade. Estética de decoração de quarto, flores selvagens de natureza morta.Veja mais na minha loja... https://www.etsy.com/shop/ArtLucyCreations?ref=seller-platform-mcnav Pintura de arte botânica em parede feita em papel aquarela grosso, prensado a frio, 300 g/m2. O tamanho da pintura é 40x30 cm, ou 16x12 polegadas, assinada à mão pelo artista. Decoração de apartamento",
-        preco: 899.98,
-        desconto: 459.99,
-        imagem: "pintura-de-aquarela-de-papoulas-vermelhas.avif",
-        categoria: "decoracao"   
-    },
-    {
-        id: 5,
-        titulo: "Escultura de casal de beija-flores de madeira, pássaros se alimentando de flores, estatueta, estátua de colibri, escultura em madeira",
-        descricao: "O Natal é a época perfeita para surpreender seus entes queridos com um presente atencioso. Aproveite embrulho de presente grátis, um enfeite de Natal e uma pulseira tradicional com cada compra. Frete padrão e expresso estão disponíveis para enviar seu pedido. O envio expresso é a melhor maneira de garantir que seu pacote chegue o mais rápido possível (3-5 dias de envio). Atualização gratuita para frete expresso na compra de dois ou mais itens. Vamos falar sobre nossos produtos com mais detalhes. O beija-flor é feito de madeira local, madeira Jempinis. Parte da base desta estátua é feita de madeira Parasita. A madeira parasita é um tipo de madeira único. A madeira do parasita se forma naturalmente como um mecanismo de defesa por uma árvore hospedeira coberta por um parasita. Essa defesa se transforma em uma madeira única chamada madeira parasita. Naquela época, essa madeira era usada apenas como lenha, mas nossos artistas habilidosos criam belas artes a partir dela.",
-        preco: 688.98,
-        desconto: 388.99,
-        imagem: "escultura-de-casal-de-beija-flores-de-madeira.avif",
-        categoria: "decoracao"   
-    },
-    {
-        id: 6,
-        titulo: "Conjunto de impressão de arte de linha mínima moderna de 2",
-        descricao: "desenho simples, arte imprimível, pôster minimalista moderno, decoração de parede imprimível",
-        preco: 120.98,
-        desconto: 68.54,
-        imagem: "conjuntodeimpressãodeartedelinhamínimamoderna.webp",
-        imagem2: "conjuntodeimpressãodeartedelinhamínimamoderna2.webp",
-        imagem3: "conjuntodeimpressãodeartedelinhamínimamoderna3.webp",
-        categoria: "decoracao"   
-    },
-    {
-        id: 7,
-        titulo: "Tábua de corte com monograma personalizada",
-        descricao: "Esta tábua de queijos e cortes de madeira artesanal personalizável é o presente perfeito! Esta tábua de corte personalizada",
-        preco: 320.98,
-        desconto: 149.99,
-        imagem: "tabuadecortecommonogramapersonalizada.webp",
-        imagem2: "tabuadecortecommonogramapersonalizada2.webp",
-        imagem3: "tabuadecortecommonogramapersonalizada3.webp",
-        categoria: "decoracao"   
-    },
-    {
-        id: 9,
-        titulo: "Quadro de letras de madeira: letras pretas e trilhos leves",
-        descricao: "Quadro de letras de madeira personalizável para displays montados na parede Crie um menu ou display de mensagens elegante",
-        preco: 997.55,
-        desconto: 499.99,
-        imagem: "quadrodeletrasdemadeirapersonalizávelparadisplaysmontadosnaparede.webp",
-        imagem2: "quadrodeletrasdemadeirapersonalizávelparadisplaysmontadosnaparede2.webp",
-        imagem3: "quadrodeletrasdemadeirapersonalizávelparadisplaysmontadosnaparede3.webp",
-        categoria: "decoracao"   
-    },
-]
+
+
+export const produtosHomeCarouselDecoracao = produtos.filter(product => product.categoria === "decoracao").slice(0, 5);

@@ -50,11 +50,38 @@ align-items: center;
 gap: 2px;
 }
 
+@media screen and (max-width: 836px) {
+  .hero-content{
+      flex-direction: column;
+  }
 
+  .overlay-hero{
+    width: 60%;
+  }
+}
+
+
+.overlay-hero{
+  background: linear-gradient(var(--fourth-color), #ff204d6e);
+  color: antiquewhite;
+  width: 50%;
+}
+
+.overlay-hero img {
+  width: 30%;
+}
 
 .p-artelize{
-  font-size: 16px;
+  font-size: 1rem
 }
+
+@media screen and (max-width: 946px) {
+    .p-artelize{
+      font-size: 0.8rem;
+    }
+}
+
+
 
 .bg-first-color {
     background-color: var(--first-color);
@@ -70,6 +97,19 @@ gap: 2px;
 
 .bg-fourth-color {
     background-color: var(--fourth-color);
+}
+
+.first-color{
+  color: var(--first-color) !important;
+}
+.second-color{
+  color: var(--second-color) !important;
+}
+.third-color{
+  color: var(--third-color) !important;
+}
+.fourth-color{
+  color: var(--fourth-color) !important;
 }
 
 .bg-linear-fourth-second{
@@ -209,15 +249,6 @@ gap: 2px;
 }
 
 
-  .overlay-hero{
-    background: linear-gradient(var(--fourth-color), #ff204d6e);
-    color: antiquewhite;
-    width: 50%;
-  }
-
-  .overlay-hero img {
-    width: 60%;
-  }
 
   @media screen and (max-width: 1244px) {
     .overlay-hero{
@@ -236,12 +267,18 @@ gap: 2px;
   }
 
   .second-home-section-p{
-    border-top: 2px solid var(--first-color);
-    border-bottom: 2px solid var(--fourth-color);
+    border-top: 2px solid var(--second-color);
+    border-bottom: 2px solid var(--first-color);
     border-left: 0;
     border-right: 0;
     height: fit-content;
   }
+
+  .third-home-section {
+      background: linear-gradient(var(--first-color), var(--fourth-color));
+      min-height: 540px;
+    }
+
 
   .carousel-container {
     position: relative;
@@ -275,7 +312,7 @@ gap: 2px;
 .carousel__face {
   position: absolute;
   width: 120px;
-  background-color: var(--fourth-color);
+  background-color: var(--third-color);
   height: fit-content;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -290,8 +327,8 @@ gap: 2px;
 }
 
   .carousel__face img {
-    width: 70px;
-    height: 80px;
+    width: 120px;
+    height: 96px;
   }
 
   .product-carousel-title {
