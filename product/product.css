@@ -7,8 +7,10 @@
 }
 
 .card {
-    border: none
+    border: none;
+    width: 100%;
 }
+
 
 .product {
     background-color: #eee

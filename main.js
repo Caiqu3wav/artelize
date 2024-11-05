@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
     produtosDestaque.slice(0, 3).forEach(produto => {
         productCardsContainer.innerHTML += `
         <div class="product-card">
-            <img src="${produto.imagem}" alt="${produto.titulo}">
+            <img src="/assets/img/products/${produto.imagem}" alt="${produto.titulo}">
             <h5 class="product-home-title">${produto.titulo}</h5>
             <p class="product-home-description">${produto.descricao}</p>
             <p class="price">Preço: R$ <s>${produto.preco.toFixed(2)}</s></p>
             <p>Desconto: <span class="desconto">R$ ${produto.desconto.toFixed(2)}</span></p>
             <div class="product-home-buttons">
                 <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
-    <a href="/product/index.html?id=${produto.id}" class="btn btn-success">Ver Mais</a>
+    <a href="/product/index.html?id=${produto.id}" target="_blank" class="btn btn-success">Ver Mais</a>
             </div>
         </div>
         `;
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateCart() {
     cartDropdown.innerHTML = '';
     cart.forEach((item, index) => {
+        console.log(item);
         const { produto, quantidade } = item;
         console.log(produto.imagem);
         cartDropdown.innerHTML += `
@@ -135,5 +136,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
+    function createCard(product) {
+        return `
+          <div class="card"> <div class="first">
+                <span class="discount">NEW</span>
+              </div>
+            <div class="image-container">
+              <img src="/assets/img/products/${product.imagem}" alt="${product.titulo}" class="thumbnail-image">
+            </div>
+            <div class="dress-name">${product.titulo}</div>
+            <div class="new-price">R$ ${product.desconto}</div>
+            <div class="buy">Compre agora</div>
+          </div>
+        `;
+      }
+    
+      // Adiciona os últimos 4 produtos ao container
+      const container = document.querySelector('.container-new-cards');
+      produtos.slice(-4).forEach(product => {
+        container.innerHTML += createCard(product);
+      });
 });

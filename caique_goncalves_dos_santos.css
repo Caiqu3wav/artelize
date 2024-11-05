@@ -263,7 +263,7 @@ gap: 2px;
 
   .second-home-section{
     background: linear-gradient(var(--fourth-color), var(--first-color));
-    min-height: 540px;
+    min-height: 420px;
   }
 
   .second-home-section-p{
@@ -277,6 +277,13 @@ gap: 2px;
   .third-home-section {
       background: linear-gradient(var(--first-color), var(--fourth-color));
       min-height: 540px;
+    }
+
+    .fourth-home-section {
+      background: linear-gradient(var(--fourth-color), var(--third-color));
+      min-height: 540px;
+      height: fit-content;
+      padding: 20px 0 20px 0;
     }
 
 
@@ -311,6 +318,7 @@ gap: 2px;
 
 .carousel__face {
   position: absolute;
+  top: -20px;
   width: 120px;
   background-color: var(--third-color);
   height: fit-content;
