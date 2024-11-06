@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     produtosDestaque.slice(0, 3).forEach(produto => {
         productCardsContainer.innerHTML += `
         <div class="product-card">
-            <img src="assets/img/products/${produto.imagem}" alt="${produto.titulo}">
+            <img src="./assets/img/products/${produto.imagem}" alt="${produto.titulo}">
             <h5 class="product-home-title">${produto.titulo}</h5>
             <p class="product-home-description">${produto.descricao}</p>
             <p class="price">Preço: R$ <s>${produto.preco.toFixed(2)}</s></p>
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(produto.imagem);
         cartDropdown.innerHTML += `
         <li class="cart-item">
-            <img src="assets/img/products/${produto.imagem}" alt="${produto.titulo}">
+            <img src="./assets/img/products/${produto.imagem}" alt="${produto.titulo}">
             <div>
                 <p class="cart-item-title">${produto.titulo} (Quantidade: ${quantidade})</p>
                 <p class="cart-item-price">R$ ${produto.preco.toFixed(2)} cada</p>
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
   face.style.transform = `rotateY(${index * 72}deg) translateZ(200px)`;
 
   face.innerHTML = `
-    <img src="assets/img/products/${produto.imagem}" alt="${produto.titulo}">
+    <img src="./assets/img/products/${produto.imagem}" alt="${produto.titulo}">
     <h5 class="product-carousel-title">${produto.titulo}</h5>
     <p class="product-carousel-preco">R$ <s>${produto.preco.toFixed(2)}</s></p>
     <p>Desconto: <span class="desconto">R$ ${produto.desconto.toFixed(2)}</span></p>
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span class="discount">NEW</span>
               </div>
             <div class="image-container">
-              <img src="assets/img/products/${product.imagem}" alt="${product.titulo}" class="thumbnail-image">
+              <img src="./assets/img/products/${product.imagem}" alt="${product.titulo}" class="thumbnail-image">
             </div>
             <div class="dress-name">${product.titulo}</div>
             <div class="new-price">R$ ${product.desconto}</div>

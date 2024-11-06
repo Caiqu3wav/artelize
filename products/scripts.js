@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const { produto, quantidade } = item;
           cartDropdown.innerHTML += `
               <li class="cart-item">
-                  <img src="/assets/img/products/${produto.imagem}" alt="${produto.titulo}">
+                  <img src="../assets/img/products/${produto.imagem}" alt="${produto.titulo}">
                   <div>
                       <p class="cart-item-title">${produto.titulo} (Quantidade: ${quantidade})</p>
                       <p class="cart-item-price">R$ ${produto.preco.toFixed(2)} cada</p>
