@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // Crie o card Bootstrap para o produto
       productCol.innerHTML = `
         <div class="card">
-          <img src="/assets/img/products/${produto.imagem}" class="card-img-top" alt="${produto.titulo}">
+          <img src="../assets/img/products/${produto.imagem}" class="card-img-top" alt="${produto.titulo}">
           <div class="card-body">
             <p class="card-title">${produto.titulo}</p>
             <p class="card-text">Preço: R$<span class="price text-danger">${produto.preco}</span></p>
