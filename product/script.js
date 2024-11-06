@@ -28,7 +28,7 @@ if (product) {
     }
 
     if (product.imagem3) {
-      document.getElementById('thumbnail2').src = `/assets/img/products/${product.imagem2}`;
+      document.getElementById('thumbnail2').src = `/assets/img/products/${product.imagem3}`;
       document.getElementById('thumbnail2').style.display = 'block';
   } else {
       document.getElementById('thumbnail2').style.display = 'none';

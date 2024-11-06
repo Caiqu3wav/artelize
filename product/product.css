@@ -3,7 +3,7 @@
     min-height: 100vh;
     flex-direction: column;
     background: linear-gradient(var(--first-color), var(--fourth-color), var(--third-color));
-    padding-top: 130px
+    padding-top: 130px;
 }
 
 .card {
@@ -13,20 +13,21 @@
 
 
 .product {
-    background-color: #eee
+    background-color: #eee;
 }
 
 .brand {
-    font-size: 13px
+    font-size: 13px;
 }
 
 .act-price {
     color: red;
-    font-weight: 700
+    font-weight: 700;
+    text-decoration: line-through;
 }
 
 .dis-price {
-    text-decoration: line-through
+    text-decoration: none;
 }
 
 .about {
