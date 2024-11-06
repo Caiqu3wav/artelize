@@ -8,10 +8,11 @@
  
 .container-new-cards .card {
   display: flex;
+  color: #fff;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: #fff;
+  background-color: var(--fourth-color);
   border: none;
   border-radius: 10px;
   width: 170px;
@@ -73,8 +74,18 @@
 
 .container-new-cards .buy {
   font-size: 12px;
-  color: purple;
+  color: var(first-color);
   font-weight: 500;
+  background-color: var(--third-color);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s all;
+}
+
+.container-new-cards .buy:hover {
+  background-color: var(--first-color);
+  color: black;
 }
 
 .container-new-cards .voutchers {

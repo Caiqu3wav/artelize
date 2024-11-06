@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.3"
-  }
+  },
+  "scripts": {
+  "build": "npm install && npm run custom-build-command",
+  "start": "node server.js"
+}
 }

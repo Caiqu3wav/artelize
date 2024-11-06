@@ -30,6 +30,18 @@ a {
     box-shadow: 5px 5px 15px #e8e8e8
 }
 
+.card-title{
+    font-size: 17px;
+    max-height: 150px;
+    overflow-y: hidden;
+    color: #ffffff !important;
+}
+
+.card-text{
+    font-size: 12px;
+    color: white;
+}
+
 .col-lg-4,
 .col-md-6 {
     padding-right: 0
@@ -289,11 +301,23 @@ label {
     margin-left: 0px
 }
 
+.price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.price-d {
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .card {
+    background: linear-gradient(var(--fourth-color), var(--third-color));
+    color: #ffffff;
     padding: 10px;
     cursor: pointer;
     transition: .3s all ease-in-out;
-    height: 350px
+    height: fit-content
 }
 
 .card:hover {
@@ -320,6 +344,13 @@ label {
     object-fit: contain;
     display: block
 }
+
+.card-img-top {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+  }
 
 .card-body .btn-group .btn {
     padding: 0;

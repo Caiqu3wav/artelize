@@ -51,23 +51,20 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
     });
 
-    cartCount.textContent = cart.reduce((total, item) => total + item.quantidade, 0); // Atualiza a contagem total
-    localStorage.setItem('cart', JSON.stringify(cart)); // Salva o carrinho no localStorage
-    setupRemoveButtons(); // Configura os botões de remover
+    cartCount.textContent = cart.reduce((total, item) => total + item.quantidade, 0);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    setupRemoveButtons(); 
 }
 
     function setupRemoveButtons() {
-        // Configura o botão para remover um único item
         document.querySelectorAll('.remove-item').forEach(button => {
             button.addEventListener('click', (e) => {
                 const index = e.target.getAttribute('data-index');
                 const item = cart[index];
 
-                // Se a quantidade for maior que 1, diminui a quantidade
                 if (item.quantidade > 1) {
                     item.quantidade -= 1;
                 } else {
-                    // Se a quantidade for 1, remove o produto do carrinho
                     cart.splice(index, 1);
                 }
                 updateCart();
