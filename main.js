@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <p class="product-carousel-preco">R$ <s>${produto.preco.toFixed(2)}</s></p>
     <p>Desconto: <span class="desconto">R$ ${produto.desconto.toFixed(2)}</span></p>
     <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
-    <a href="/product.html?id=${produto.id}" class="btn btn-success mt-2">Ver Mais</a>
+    <a href="/product/index.html?id=${produto.id}" class="btn btn-success mt-2">Ver Mais</a>
   `;
 
   carousel.appendChild(face);
