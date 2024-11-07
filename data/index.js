@@ -18,7 +18,7 @@ export const produtosDestaque = [
     },
     {
         id: 3,
-        titulo: "Estátua de Sukhasiddhi | Um Yogini e Mestre em Meditação | Escultura Budista Artesanal Autêntica | Arte do Himalaia do Nepal | Ouro 24k dourado",
+        titulo: "Estátua de Sukhasiddhi | Um Yogini e Mestre em Meditação | Escultura Budista Artesanal Autêntica | Ouro 24k dourado",
         descricao: "Estátua rara feita à mão de Sukhasiddhi DakiniSukhasiddhi foi um professor Vajrayana budista indiano nascido na Caxemira. Esta impressionante e rara estátua de Sukhasiddhi foi esculpida à mão em nosso estúdio em Katmandu. Somos um grupo de escultores de divindades budistas especializados na criação de obras de arte únicas. Esta estátua foi esculpida com um corpo de cobre e dourada com ouro genuíno 24k antes de ser pintada com ricas tintas acrílicas para lhe dar uma aparência luminosa. Tamanho: 16,9/43 cm (Altura) x 16,9/43 cm (Base)Peso: 9,49kg Material: ouro 24K dourado, corpo em cobre, pinturas acrílicas",
         preco: 15599.99,
         desconto: 10099.99,
@@ -45,7 +45,7 @@ export const produtos = [
     },
     {
         id: 3,
-        titulo: "Estátua de Sukhasiddhi | Um Yogini e Mestre em Meditação | Escultura Budista Artesanal Autêntica | Arte do Himalaia do Nepal | Ouro 24k dourado",
+        titulo: "Estátua de Sukhasiddhi | Um Yogini e Mestre em Meditação | Escultura Budista Artesanal | Ouro 24k dourado",
         descricao: "Estátua rara feita à mão de Sukhasiddhi DakiniSukhasiddhi foi um professor Vajrayana budista indiano nascido na Caxemira. Esta impressionante e rara estátua de Sukhasiddhi foi esculpida à mão em nosso estúdio em Katmandu. Somos um grupo de escultores de divindades budistas especializados na criação de obras de arte únicas. Esta estátua foi esculpida com um corpo de cobre e dourada com ouro genuíno 24k antes de ser pintada com ricas tintas acrílicas para lhe dar uma aparência luminosa. Tamanho: 16,9/43 cm (Altura) x 16,9/43 cm (Base)Peso: 9,49kg Material: ouro 24K dourado, corpo em cobre, pinturas acrílicas",
         preco: 15599.99,
         desconto: 10099.99,
@@ -53,7 +53,7 @@ export const produtos = [
     },
     {
         id: 4,
-        titulo: "Pintura em aquarela de papoulas vermelhas, arte de campo de flores silvestres pintada à mão, decoração de parede de papoulas",
+        titulo: "Pintura em aquarela de papoulas vermelhas, arte de campo de flores silvestres pintada à mão",
         descricao: "A pintura em aquarela de papoulas vermelhas é uma ideia perfeita de presente de inauguração para a mãe, natureza, campo, arte de parede de papoula, amante da arte de flores silvestres ou todos que você ama. Uma arte única e vibrante de flores vermelhas do campo pintadas à mão decorará qualquer interior. A decoração de parede de papoulas tamanho A3 horizontal é em papel aquarela pesado de ótima qualidade. Estética de decoração de quarto, flores selvagens de natureza morta.Veja mais na minha loja... https://www.etsy.com/shop/ArtLucyCreations?ref=seller-platform-mcnav Pintura de arte botânica em parede feita em papel aquarela grosso, prensado a frio, 300 g/m2. O tamanho da pintura é 40x30 cm, ou 16x12 polegadas, assinada à mão pelo artista. Decoração de apartamento",
         preco: 899.98,
         desconto: 459.99,
@@ -62,7 +62,7 @@ export const produtos = [
     },
     {
         id: 5,
-        titulo: "Escultura de casal de beija-flores de madeira, pássaros se alimentando de flores, estatueta, estátua de colibri, escultura em madeira, presente de inauguração, decoração de feriado, arte",
+        titulo: "Escultura de casal de beija-flores de madeira, pássaros se alimentando de flores, estátua de colibri, escultura em madeira",
         descricao: "O Natal é a época perfeita para surpreender seus entes queridos com um presente atencioso. Aproveite embrulho de presente grátis, um enfeite de Natal e uma pulseira tradicional com cada compra. Frete padrão e expresso estão disponíveis para enviar seu pedido. O envio expresso é a melhor maneira de garantir que seu pacote chegue o mais rápido possível (3-5 dias de envio). Atualização gratuita para frete expresso na compra de dois ou mais itens. Vamos falar sobre nossos produtos com mais detalhes. O beija-flor é feito de madeira local, madeira Jempinis. Parte da base desta estátua é feita de madeira Parasita. A madeira parasita é um tipo de madeira único. A madeira do parasita se forma naturalmente como um mecanismo de defesa por uma árvore hospedeira coberta por um parasita. Essa defesa se transforma em uma madeira única chamada madeira parasita. Naquela época, essa madeira era usada apenas como lenha, mas nossos artistas habilidosos criam belas artes a partir dela.",
         preco: 688.98,
         desconto: 388.99,
@@ -191,7 +191,7 @@ export const produtos = [
     },
     {
         id: 17,
-        titulo: "Caminho de mesa de bonecos de neve de inverno encantador - Decoração de mesa de feriado com design de boneco de neve festivo",
+        titulo: "Caminho de mesa de bonecos de neve de inverno encantador - Decoração de mesa design de boneco de neve festivo",
         descricao: "Este charmoso caminho de mesa de bonecos de neve de inverno traz uma vibração festiva e aconchegante para sua mesa de jantar durante a temporada de férias. Perfeito para aqueles que amam decorar suas casas para as celebrações de inverno. É um ótimo complemento para as reuniões de Natal, Hanukkah e Ano Novo Características do produto - Vários tamanhos disponíveis para maior comodidade - Impresso em 100% poliéster usando tecnologia de sublimação para designs nítidos e vibrantes - Impresso em 100% algodão sarja usando tecnologia DTF para um visual clássico - Bordas com bainha para maior durabilidade - Disponível em dois tipos de materiais e duas opções de tamanho",
         preco: 336.60,
         desconto: 201.96,
