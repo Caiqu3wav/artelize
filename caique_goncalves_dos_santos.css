@@ -26,6 +26,12 @@ a{
   color: #ccc;
 }
 
+.hero {
+  background-image: url('./assets/img/bgcraftsmanship1.jpg');
+  min-height: 600px;
+}
+
+
 .price {
   text-decoration: line-through;
 }
@@ -220,11 +226,7 @@ gap: 2px;
 }
 
 
-  .hero {
-    background-image: url(./assets/img/bgcraftsmanship1.jpg);
-    min-height: 600px;
-  }
-
+ 
   .bg-header{
     background: linear-gradient(#00224D, #00214d17);
     
@@ -325,11 +327,6 @@ gap: 2px;
       min-height: 540px;
     }
 
-    @media screen and (max-width: 910px) {
-      .third-home-section-content{
-        flex-direction: column-reverse;
-      }
-    }
 
     .fourth-home-section {
       background: linear-gradient(var(--fourth-color), var(--third-color));
@@ -352,13 +349,6 @@ gap: 2px;
     transform-style: preserve-3d; 
     animation: rotate360 60s infinite forwards linear;
   }
-
-.carousel-container {
-  position: relative;
-  width: 300px;
-  margin: 50px auto;
-  perspective: 1000px;
-}
 
 .carousel {
   width: 100%;
@@ -415,7 +405,69 @@ gap: 2px;
     text-decoration: line-through;
     color: #a9a9a9;
   }
+
   
+  @media screen and (max-width: 910px) {
+    .third-home-section-content{
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 180px;
+      margin: 20px auto;
+      perspective: 700px;
+    }
+
+    .carousel__face{
+      width: 90px;
+      transform: rotateY(calc(var(--index) * 72deg)) translateZ(140px) !important;
+    }
+
+    .carousel__face img {
+      width: 100%;
+      height: 56px;
+    }
+
+    .second-home-section-p {
+      width: 80% !important;
+    }
+
+    .product-carousel-title {
+      font-size: 0.6rem; /* Diminuir tamanho da fonte do título */
+      margin: 4px 0;
+  }
+
+  .product-carousel-preco {
+      font-size: 0.7rem; /* Diminuir tamanho da fonte do preço */
+  }
+
+  .desconto {
+      font-size: 0.8rem; /* Diminuir tamanho da fonte do desconto */
+  }
+
+  .add-cart-btn {
+      font-size: 0.5rem;
+      padding: 4px 8px;
+  }
+
+  .product-carousel-preco-btn{
+    font-size: 10px !important;
+  }
+  }
+  
+  @media screen and (max-width: 668px) {
+    .carousel__face{
+      top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 506) {
+    
+  }
 
   
   span {
