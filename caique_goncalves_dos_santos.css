@@ -27,7 +27,7 @@ a{
 }
 
 .hero {
-  background-image: url(/assets/img/bgcraftsmanship1.jpg);
+  background: url(./assets/img/bgcraftsmanship1.jpg);
   min-height: 600px;
 }
 
@@ -262,6 +262,8 @@ gap: 2px;
     justify-content: space-between; /* Distribui os cards com espaço ao redor */
 }
 
+
+
 .product-card {
   background-color: var(--fourth-color);
   color: aliceblue;
@@ -295,6 +297,11 @@ gap: 2px;
     height: auto;
 }
 
+@media screen and (max-width: 460px) {
+  .product-cards{
+    flex-flow: wrap;
+  }
+}
 
 
   .transition-overlay-1{
