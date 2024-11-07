@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <p class="card-text">Desconto: R$<span class="price-d text-success">${produto.desconto}</span></p>
             <div class="d-flex align-items-center gap-2">
             <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
-    <a href="/product/index.html?id=${produto.id}" class="btn btn-success">Ver Mais</a>
+    <a href="./product/index.html?id=${produto.id}" class="btn btn-success">Ver Mais</a>
            </div>
           </div>
         </div>

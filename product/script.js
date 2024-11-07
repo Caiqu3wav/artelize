@@ -1,7 +1,5 @@
 import { produtos } from "../data/index.js";
 
-
-
 document.addEventListener("DOMContentLoaded", function(event) {
 
     function change_image(image){
