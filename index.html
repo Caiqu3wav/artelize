@@ -8,11 +8,14 @@
   <title>Artelize</title>
   <link rel="icon" type="image/x-icon" href="/assets/img/artelizeLogo.png">
   <link rel="stylesheet" href="./caique_goncalves_dos_santos.css">
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="./styles/product-new-cards.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="./styles/newsletter.css">
+  <link rel="stylesheet" href="./styles/hero.css">
   <script src="https://kit.fontawesome.com/f50054c2da.js" crossorigin="anonymous"></script>
   <style>
     .dropdown-menu {
@@ -28,12 +31,12 @@
       <div class="container-fluid">
         <img src="./assets/img/artelizeLogo.png" width="80px" alt="">
 
-        <ul class="navbar-nav d-flex flex-row mb-2 gap-4 mb-lg-0">
+        <ul class="navbar-nav navbar-toggler-md-none flex-row mb-2 gap-4 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" target="_blank" href="/products/index.html">Produtos</a>
+            <a class="nav-link" target="_blank" href="./products/index.html">Produtos</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -43,22 +46,27 @@
             </a>
             <ul class="dropdown-menu">
               <li class="dropdown-item"><a class="text-decoration-none" target="_blank"
-                  href="/categorias/decoracao/index.html">Decoração</a></li>
+                  href="./categorias/decoracao/index.html">Decoração</a></li>
               <li class="dropdown-item"><a class="text-decoration-none" target="_blank"
-                  href="/categorias/moveis/index.html">Móveis</a></li>
+                  href="./categorias/moveis/index.html">Móveis</a></li>
               <li class="dropdown-item"><a class="text-decoration-none" target="_blank"
-                  href="/categorias/cozinha/index.html">Utensílios de
+                  href="./categorias/cozinha/index.html">Utensílios de
                   Cozinha</a></li>
               <li class="dropdown-item"><a class="text-decoration-none" target="_blank"
-                  href="/categorias/acessorios/index.html">Acessórios</a>
+                  href="./categorias/acessorios/index.html">Acessórios</a>
               </li>
             </ul>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" target="_blank" href="/sobre/index.html">Sobre</a>
+            <a class="nav-link" target="_blank" href="./sobre/index.html">Sobre</a>
           </li>
         </ul>
+
+        <button class="navbar-toggler navbar-toggler-md" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="d-flex gap-3">
           <button class="btn btn-outline-light cart-btn position-relative" type="button" data-bs-toggle="dropdown"
@@ -80,11 +88,12 @@
             <li class="text-end"><button class="btn btn-primary btn-sm">Finalizar Compra</button></li>
           </ul>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <button class="navbar-toggler navbar-toggler-md-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="offcanvas offcanvas-end aside-linear-bg" tabindex="-1" id="offcanvasNavbar"
+
+          <div class="offcanvas offcanvar-end-c aside-linear-bg" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Artelize</h5>
@@ -114,10 +123,10 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" style="background-image: linear-gradient(var(--first-color), var(--fourth-color));">
     <div class="hero-content d-flex w-full align-items-center pt-3 justify-content-around px-2 gap-2">
       <div class="px-4 overlay-hero rounded h-25 d-flex flex-column gap-3 justify-content-center align-items-center">
-        <img src="/assets/img/artelizeLogo.png" alt="">
+        <img src="./assets/img/artelizeLogo.png" alt="">
         <h2 class="border-bottom border-secondary">Artelize</h2>
         <p class="p-artelize">Na Artelize, acreditamos que cada espaço merece um toque de autenticidade e beleza. Nossa
           seleção de produtos
@@ -127,7 +136,7 @@
           Cada produto conta uma história, e estamos aqui para ajudar você a contar a sua, com produtos que inspiram e
           encantam. Venha explorar nossa coleção e descubra como a arte pode enriquecer o seu lar!</p>
       </div>
-      <div class="w-50 pt-5 ">
+      <div class="product-card-container pt-5">
         <h1 class="border-bottom rounded text-white py-2 border-warning bg-dark" style="--bs-bg-opacity: .5">Produtos
           Destaque</h1>
         <div class="product-cards">
@@ -135,44 +144,46 @@
         </div>
       </div>
     </div>
-    <div class="transition-overlay-1">a</div>
+    <div class="transition-overlay-1"></div>
   </section>
-  <section class="second-home-section d-flex align-items-center justify-content-center px-5 text-white">
+  <section class="second-home-section align-items-center justify-content-center px-5 text-white">
     <div class="">
-      <h1>Obras atemporais criadas por artesãos profissionais</h1>
-      <div class="d-flex">
+      <h3>Obras atemporais criadas por artesãos profissionais</h3>
+      <div class="d-flex features-container">
         <div class="d-flex flex-column align-items-center">
           <div class="d-flex align-items-center gap-2 w-auto pe-3" style="font-size: 14px; border-color: var(--second-color);
         width: fit-content !important;">
-            <img src="/assets/img/artelizelogoutil.svg" width="80px" alt="artelize logo util">
+            <img src="./assets/img/artelizelogoutil.svg" width="80px" alt="artelize logo util">
             <p>Curadoria internacional</p>
           </div>
           <div class="d-flex align-items-center gap-2 w-auto ps-3"
             style="font-size: 14px; border-top: solid 2px; width: fit-content !important;">
-            <img src="/assets/img/artelizelogoutil2.svg" width="80px" alt="artelize logo util">
-            <p>Qualidade Premium em preços justos</p>
+            <img src="./assets/img/artelizelogoutil2.svg" width="80px" alt="artelize logo util">
+            <p class="pe-2">Qualidade Premium em preços justos</p>
           </div>
         </div>
-        <div class="d-flex flex-column align-items-center justify-content-center" style="border-left: solid 2px; border-color: var(--second-color);">
-          <div class="d-flex align-items-center gap-2 w-auto pe-3" style="font-size: 14px; width: fit-content !important;">
-            <img src="/assets/img/artelizelogoutil3.svg" width="80px" alt="artelize logo util">
+        <div class="d-flex flex-column align-items-center justify-content-center"
+          style="border-left: solid 2px; border-color: var(--second-color);">
+          <div class="d-flex align-items-center gap-2 w-auto pe-3"
+            style="font-size: 14px; width: fit-content !important;">
+            <img src="./assets/img/artelizelogoutil3.svg" width="80px" alt="artelize logo util">
             <p>Autenticidade garantida</p>
           </div>
           <div class="d-flex align-items-center gap-2 w-auto ps-3" style="font-size: 14px; border-top: solid 2px;
           width: fit-content !important; width: fit-content !important;">
-            <img src="/assets/img/artelizelogoutil4.svg" width="80px" alt="artelize logo util">
+            <img src="./assets/img/artelizelogoutil4.svg" width="80px" alt="artelize logo util">
             <p>Cada design tem o legado de <br> gerações</p>
           </div>
         </div>
       </div>
     </div>
     <div class="container-new-cards mt-5" id="carousel-container">
-    
+
     </div>
   </section>
   <section class="third-home-section text-white px-4">
     <h1 class="fourth-color">Decoração Artesanal para Seu Lar</h1>
-    <div class="d-flex justify-content-between">
+    <div class="third-home-section-content d-flex justify-content-between">
       <p class="second-home-section-p text-sm" style="width: 200px;">
         Na Artelize, oferecemos uma seleção exclusiva de produtos artesanais que trazem autenticidade e charme para o
         seu
@@ -191,78 +202,151 @@
   </section>
 
   <section class="fourth-home-section text-white px-4">
+    <h1>A importância histórica e o destaque do artesanato no design</h1>
+    <p class="border-bottom border-top" style="border-color: var(--second-color);">
+      O artesanato representa uma herança cultural que atravessa gerações, preservando técnicas e estilos únicos. Em um
+      mundo cada vez mais industrializado, ele se destaca por seu valor artístico e pelo toque humano que confere ao
+      design. Incorporar peças artesanais no dia a dia é uma maneira de celebrar a história e enriquecer o ambiente com
+      autenticidade e criatividade.
+    </p>
 
-    </section>
-    <footer class="text-center text-lg-start text-white bg-fourth-color">
-      <section class="d-flex justify-content-between p-4 bg-third-color">
-
-        <div class="me-5">
-          <span>Se conecte nas redes sociais:</span>
-        </div>
-        
-        <div>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </section>
-      <section class="">
-        <div class="container text-center text-md-start mt-5">
-
-          <div class="row mt-3">
-            
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-              <h6 class="text-uppercase fw-bold">Artelize</h6>
-              <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-              <p>
-                Artelize traz a arte e o charme artesanal para sua vida. Nossas peças são feitas à mão, garantindo
-                exclusividade e qualidade para seu lar.
-              </p>
+    <div class="categorias-card d-flex align-items-center justify-content-around">
+      <div class="d-flex flex-column">
+        <a href="./categorias/decoracao/index.html" class="d-flex gap-2">
+            <img src="./assets/img/decoracoesartezanas.webp" class="rounded-3" width="200" height="90" alt="Decorações imagem">
+            <div class="d-flex flex-column">
+                <h3 class="text-white">Decorações</h3>
+                <p class="text-white">Peças únicas em cerâmica, madeira e tecidos para enriquecer qualquer ambiente.</p>
+                <button class="categorias-card-btn border border-2 border-black">
+                    <i class="fa-solid fa-angles-right"></i>
+                </button>
             </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold">Produtos</h6>
-              <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-              <p><a href="#!" class="text-white">Decoração</a></p>
-              <p><a href="#!" class="text-white">Artesanato</a></p>
-              <p><a href="#!" class="text-white">Presentes</a></p>
-              <p><a href="#!" class="text-white">Customizáveis</a></p>
+        </a>
+        <a href="./categorias/moveis/index.html" class="d-flex gap-2">
+            <img src="./assets/img/moveisartezanais.webp" class="rounded-3" width="200" height="90" alt="Móveis imagem">
+            <div class="d-flex flex-column">
+                <h3 class="text-white">Móveis</h3>
+                <p class="text-white">Móveis artesanais de alta qualidade, feitos para durar e trazer charme ao lar.</p>
+                <button class="categorias-card-btn border border-2 border-black">
+                    <i class="fa-solid fa-angles-right"></i>
+                </button>
             </div>
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <h6 class="text-uppercase fw-bold">Contato</h6>
-              <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-              <p><i class="fas fa-home mr-3"></i> São Paulo, SP, Brasil</p>
-              <p><i class="fas fa-envelope mr-3"></i> contato@artelize.com.br</p>
-              <p><i class="fas fa-phone mr-3"></i> +55 11 1234-5678</p>
-              <p><i class="fas fa-print mr-3"></i> +55 11 9876-5432</p>
+        </a>
+    </div>
+    <div class="d-flex flex-column">
+        <a href="./categorias/acessorios/index.html" class="d-flex gap-2">
+            <img src="./assets/img/acessoriosartezanais.jfif" class="rounded-3" width="200" height="90" alt="Acessórios imagem">
+            <div class="d-flex flex-column">
+                <h3 class="text-white">Acessórios</h3>
+                <p class="text-white">Complementos de estilo feitos à mão, com atenção a cada detalhe.</p>
+                <button class="categorias-card-btn border border-2 border-black">
+                    <i class="fa-solid fa-angles-right"></i>
+                </button>
+            </div>
+        </a>
+        <a href="./categorias/utensilios-de-cozinha/index.html" class="d-flex gap-2">
+            <img src="./assets/img/cozinhaartezanais.jfif" class="rounded-3" width="200" height="90" alt="Utensílios de cozinha imagem">
+            <div class="d-flex flex-column">
+                <h3 class="text-white">Utensílios de cozinha</h3>
+                <p class="text-white">Utensílios práticos e estéticos que transformam o ato de cozinhar em arte.</p>
+                <button class="categorias-card-btn border border-2 border-black">
+                    <i class="fa-solid fa-angles-right"></i>
+                </button>
+            </div>
+        </a>
+    </div>
+    </div>
+  </section>
+
+
+  <section class="newsletter-container w-100">
+    <div class="d-flex justify-content-center align-items-center newsletter-rows">
+      <div class="">
+        <div class="card">
+          <div class="text-center">
+            <img src="./assets/img/newsletter-logo.png" width="200">
+            <p class="d-block mt-3">Deixe seu e-mail abaixo e receba novidades e promoções especiais</p>
+            <div class="mx-5">
+              <div class="input-group mb-3 mt-4">
+                <input type="text" class="form-control" placeholder="Enter email" aria-label="Recipient's username"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-success border-rad" type="button" id="button-addon2">Subscribe</button>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="text-center text-lg-start text-white bg-fourth-color">
+    <section class="d-flex justify-content-between p-4 bg-third-color">
+
+      <div class="me-5">
+        <span>Se conecte nas redes sociais:</span>
+      </div>
+
+      <div>
+        <a href="https://facebook.com/artelize" target="_blank" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/artelize" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com/artelize" target="_blank" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin/artelize" target="_blank" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/caiqu3wav" target="_blank" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </section>
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+
+        <div class="row mt-3">
+
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+            <h6 class="text-uppercase fw-bold">Artelize</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p>
+              Artelize traz a arte e o charme artesanal para sua vida. Nossas peças são feitas à mão, garantindo
+              exclusividade e qualidade para seu lar.
+            </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Produtos</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p><a href="#!" class="text-white">Decoração</a></p>
+            <p><a href="#!" class="text-white">Artesanato</a></p>
+            <p><a href="#!" class="text-white">Presentes</a></p>
+            <p><a href="#!" class="text-white">Customizáveis</a></p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold">Contato</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p><i class="fas fa-home mr-3"></i> São Paulo, SP, Brasil</p>
+            <p><i class="fas fa-envelope mr-3"></i> contato@artelize.com.br</p>
+            <p><i class="fas fa-phone mr-3"></i> +55 11 1234-5678</p>
+            <p><i class="fas fa-print mr-3"></i> +55 11 9876-5432</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
 
   <script type="module" src="./main.js"></script>
   <script type="module" src="./data/index.js"></script>
   <script src="./scripts/product-new-cards.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 

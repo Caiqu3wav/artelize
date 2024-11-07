@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
     produtosDestaque.slice(0, 3).forEach(produto => {
         productCardsContainer.innerHTML += `
         <div class="product-card">
-            <img src="/assets/img/products/${produto.imagem}" alt="${produto.titulo}">
+            <img src="./assets/img/products/${produto.imagem}" alt="${produto.titulo}">
             <h5 class="product-home-title">${produto.titulo}</h5>
             <p class="product-home-description">${produto.descricao}</p>
             <p class="price">Preço: R$ <s>${produto.preco.toFixed(2)}</s></p>
             <p>Desconto: <span class="desconto">R$ ${produto.desconto.toFixed(2)}</span></p>
             <div class="product-home-buttons">
                 <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
-    <a href="/product/index.html?id=${produto.id}" target="_blank" class="btn btn-success">Ver Mais</a>
+    <a href="./product/index.html?id=${produto.id}" target="_blank" class="btn btn-success">Ver Mais</a>
             </div>
         </div>
         `;
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(produto.imagem);
         cartDropdown.innerHTML += `
         <li class="cart-item">
-            <img src="/assets/img/products/${produto.imagem}" alt="${produto.titulo}">
+            <img src="./assets/img/products/${produto.imagem}" alt="${produto.titulo}">
             <div>
                 <p class="cart-item-title">${produto.titulo} (Quantidade: ${quantidade})</p>
                 <p class="cart-item-price">R$ ${produto.preco.toFixed(2)} cada</p>
@@ -88,18 +88,41 @@ document.addEventListener('DOMContentLoaded', function () {
   const face = document.createElement('div');
   face.classList.add('carousel__face');
   face.style.transform = `rotateY(${index * 72}deg) translateZ(200px)`;
-
+  face.style.setProperty('--index', index);
+  
   face.innerHTML = `
-    <img src="/assets/img/products/${produto.imagem}" alt="${produto.titulo}">
+    <img src="./assets/img/products/${produto.imagem}" alt="${produto.titulo}">
     <h5 class="product-carousel-title">${produto.titulo}</h5>
     <p class="product-carousel-preco">R$ <s>${produto.preco.toFixed(2)}</s></p>
     <p>Desconto: <span class="desconto">R$ ${produto.desconto.toFixed(2)}</span></p>
     <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
-    <a href="/product/index.html?id=${produto.id}" class="btn btn-success mt-2">Ver Mais</a>
+    <a href="./product/index.html?id=${produto.id}" class="product-carousel-preco-btn btn btn-success mt-2">Ver Mais</a>
   `;
 
   carousel.appendChild(face);
 });
+
+
+function createCard(product) {
+    return `
+      <div class="card"> <div class="first">
+            <span class="discount">NEW</span>
+          </div>
+        <div class="image-container">
+          <img src="./assets/img/products/${product.imagem}" alt="${product.titulo}" class="thumbnail-image">
+        </div>
+        <div class="dress-name">${product.titulo}</div>
+        <div class="new-price">R$ ${product.desconto}</div>
+        <div class="buy add-cart-btn" data-produto='${JSON.stringify(product)}'>Compre agora</div>
+      </div>
+    `;
+  }
+
+  // Adiciona os últimos 4 produtos ao container
+  const container = document.querySelector('.container-new-cards');
+  produtos.slice(-4).forEach(product => {
+    container.innerHTML += createCard(product);
+  });
 
 document.querySelectorAll('.add-cart-btn').forEach(button => {
     button.addEventListener('click', () => {
@@ -133,24 +156,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    function createCard(product) {
-        return `
-          <div class="card"> <div class="first">
-                <span class="discount">NEW</span>
-              </div>
-            <div class="image-container">
-              <img src="/assets/img/products/${product.imagem}" alt="${product.titulo}" class="thumbnail-image">
-            </div>
-            <div class="dress-name">${product.titulo}</div>
-            <div class="new-price">R$ ${product.desconto}</div>
-            <div class="buy">Compre agora</div>
-          </div>
-        `;
-      }
-    
-      // Adiciona os últimos 4 produtos ao container
-      const container = document.querySelector('.container-new-cards');
-      produtos.slice(-4).forEach(product => {
-        container.innerHTML += createCard(product);
-      });
 });

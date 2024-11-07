@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", function() {
       // Crie o card Bootstrap para o produto
       productCol.innerHTML = `
         <div class="card">
-          <img src="/assets/img/products/${produto.imagem}" class="card-img-top" alt="${produto.titulo}">
+          <img src="../assets/img/products/${produto.imagem}" class="card-img-top" alt="${produto.titulo}">
           <div class="card-body">
             <p class="card-title">${produto.titulo}</p>
             <p class="card-text">Preço: R$<span class="price text-danger">${produto.preco}</span></p>
             <p class="card-text">Desconto: R$<span class="price-d text-success">${produto.desconto}</span></p>
             <div class="d-flex align-items-center gap-2">
             <button class="add-cart-btn" data-produto='${JSON.stringify(produto)}'><i class="fa-solid fa-plus"></i></button>
-    <a href="/product/index.html?id=${produto.id}" class="btn btn-success">Ver Mais</a>
+    <a href="./product/index.html?id=${produto.id}" class="btn btn-success">Ver Mais</a>
            </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const { produto, quantidade } = item;
           cartDropdown.innerHTML += `
               <li class="cart-item">
-                  <img src="/assets/img/products/${produto.imagem}" alt="${produto.titulo}">
+                  <img src="../assets/img/products/${produto.imagem}" alt="${produto.titulo}">
                   <div>
                       <p class="cart-item-title">${produto.titulo} (Quantidade: ${quantidade})</p>
                       <p class="cart-item-price">R$ ${produto.preco.toFixed(2)} cada</p>
